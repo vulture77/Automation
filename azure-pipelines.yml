@@ -23,6 +23,7 @@ steps:
     python -m pip install --upgrade pip
     pip install -r requirements.txt
     pip install selenium
+    pip install chromedriver-py
     pip install webdriver-manager
     pip install pytest
     pip install requests
