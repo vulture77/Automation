@@ -30,7 +30,7 @@ class login(unittest.TestCase):
 
         #cls.driver = webdriver.Chrome(executable_path="Path\\chrome\\chromedriver.exe", options=chrome_options)
         #cls.driver = webdriver.Chrome(executable_path="C:\\Users\\taan\\Desktop\\pp\\Drivers\\chrome\\chromedriver")
-        cls.driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+        cls.driver = webdriver.Chrome(ChromeDriverManager().install())
         cls.driver.implicitly_wait(10)
         cls.driver.get("http://52.172.136.96:3000/")
         cls.driver.set_window_size(1920, 1080)
