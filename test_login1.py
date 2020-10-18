@@ -1,8 +1,7 @@
 from selenium import webdriver
-
 import unittest
-import time
 import random
+import time
 import string
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 from selenium.webdriver.common.action_chains import ActionChains
@@ -17,6 +16,8 @@ chrome_options.add_argument("--headless")
 
 class login(unittest.TestCase):
 
+    qa_username = 'admin@reverieinc.com'
+    qa_password = 'admin'
     fre_username = 'tushar.jawa@reverieinc.com'
     fre1_username = 'tushar.jawa@3reverieinc.com'
     fre_password = 'admin'
@@ -29,7 +30,7 @@ class login(unittest.TestCase):
     def setUpClass(cls):
 
         #cls.driver = webdriver.Chrome(executable_path="C:\\Users\\taan\\Desktop\\pp\\Drivers\\chrome\\chromedriver", options=chrome_options)
-        cls.driver = webdriver.Chrome("C://Users//taan//Desktop//Anvvvvv//Automation//Path//chrome//chromedriver.exe")
+        cls.driver = webdriver.Chrome("C://Users//taan//Desktop//Anvvvvv//Automation//chromedriver.exe")
         cls.driver.implicitly_wait(10)
         cls.driver.get("http://52.172.136.96:3000/")
         cls.driver.set_window_size(1920, 1080)
@@ -65,14 +66,15 @@ class login(unittest.TestCase):
         self.driver.find_element_by_id("normal_login_email").send_keys(self.fre_username)
         self.driver.find_element_by_id("normal_login_password").send_keys(self.fre1_password)
         self.driver.find_element_by_xpath("//text()[.='Log in']/ancestor::button[1]").click()
-        # try:
         self.driver.find_element_by_xpath("//*[text()='Email or password is incorrect']").click()
         print("Invalid Password")
         self.driver.close()
+        
 
     @classmethod
     def tearDown(cls):
         print("Test Passed")
         
+
 if __name__ == '__main__':
     unittest.main()
