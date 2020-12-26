@@ -30,3 +30,8 @@ steps:
     pytest test_login1.py
   displayName: 'login'
 
+- script: |
+    pytest test_login2.py
+  displayName: 'create'
+
+
