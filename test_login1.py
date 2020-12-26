@@ -18,7 +18,7 @@ class login(unittest.TestCase):
 
     qa_username = 'admin@reverieinc.com'
     qa_password = 'admin'
-    fre_username = 'tushar.jawa@reverieinc.com'
+    fre_username = 'tushar.jawa@gmail.com'
     fre1_username = 'tushar.jawa@3reverieinc.com'
     fre_password = 'admin'
     fre1_password = 'admin2'
@@ -32,7 +32,7 @@ class login(unittest.TestCase):
         #cls.driver = webdriver.Chrome(executable_path="C:\\Users\\taan\\Desktop\\pp\\Drivers\\chrome\\chromedriver", options=chrome_options)
         cls.driver = webdriver.Chrome("chrome//chromedriver.exe")
         cls.driver.implicitly_wait(10)
-        cls.driver.get("http://52.172.136.96:3000/")
+        cls.driver.get("https://qa-dashboard.reverieinc.com/")
         cls.driver.set_window_size(1920, 1080)
         
     def test_1__________Login_Valid_Credentials(self):
