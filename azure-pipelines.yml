@@ -29,4 +29,8 @@ steps:
 - script: |
     pytest Auto/Testcases/SuperAdmin/test_1_login.py
   displayName: 'login'
+
+- script: |
+    pytest Auto/Testcases/SuperAdmin/test_2_Create_Users.py
+  displayName: 'Create Users'
   
