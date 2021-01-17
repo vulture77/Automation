@@ -318,7 +318,7 @@ class Createprojectmixin:
         self.driver.find_element_by_xpath("//button[text()='Upload']").click()
         time.sleep(1)
         self.driver.find_element_by_xpath("//button[@class='ant-btn']/following-sibling::button[1]").click()
-        self.driver.find_element_by_css_selector("input[type='file']").send_keys("C:\\Users\\taan\\Desktop\\Auto\\Fileformats\\File.csv")
+        self.driver.find_element_by_css_selector("input[type='file']").send_keys("Auto/Fileformats/File.csv")
         time.sleep(2)
         self.driver.find_element_by_xpath("//button[@class='ant-btn']/following-sibling::button[1]").click()
         self.driver.find_element_by_xpath("//button[contains(@class,'ant-btn w-25')]").click()
