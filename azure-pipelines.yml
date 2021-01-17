@@ -26,17 +26,7 @@ steps:
     pip install pytest_check
   displayName: 'Install dependencies'
 
-- script: |
-    pytest Auto/Testcases/SuperAdmin/test_1_login.py
-  displayName: 'login'
 
-- script: |
-    pytest Auto/Testcases/SuperAdmin/test_2_Create_Users.py
-  displayName: 'Create Users'
-
-- script: |
-    pytest Auto/Testcases/SuperAdmin/test_3_Edit_User.py
-  displayName: 'Edit Users'
 
 - script: |
     pytest Auto/Testcases/SuperAdmin/test_5_Create_Project.py
