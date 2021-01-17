@@ -26,7 +26,23 @@ steps:
     pip install pytest_check
   displayName: 'Install dependencies'
 
+- script: |
+    pytest Auto/Testcases/SuperAdmin/test_1_login.py
+  displayName: 'Login'
+  continueOnError: true
+  condition: always()
 
+- script: |
+    pytest Auto/Testcases/SuperAdmin/test_2_Create_Users.py
+  displayName: 'Create Users'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Auto/Testcases/SuperAdmin/test_3_Edit_User.py
+  displayName: 'Modify Users'
+  continueOnError: true
+  condition: always()
 
 - script: |
     pytest Auto/Testcases/SuperAdmin/test_5_Create_Project.py
@@ -35,27 +51,42 @@ steps:
 - script: |
     pytest Auto/Testcases/SuperAdmin/test_6_Preview_Localization.py
   displayName: 'Preview Localization'
+  continueOnError: true
+  condition: always()
+  
 
 - script: |
     pytest Auto/Testcases/SuperAdmin/test_7_Add_Exclusion_and_Validate.py
   displayName: 'Validate Added Exclusion'
+  continueOnError: true
+  condition: always()
 
 - script: |
     pytest Auto/Testcases/SuperAdmin/test_8_Remove_Exclusion_and_Validate.py
   displayName: 'Validate Removed Exclusion'
+  continueOnError: true
+  condition: always()
 
 - script: |
     pytest Auto/Testcases/SuperAdmin/test_9_Upload_Csv_and_Validate.py
   displayName: 'Validate CSV Translation'
+  continueOnError: true
+  condition: always()
   
 - script: |
     pytest Auto/Testcases/SuperAdmin/test__10_Add_Customfontsize_and_Validate.py
   displayName: 'Validate added Fontsize'
+  continueOnError: true
+  condition: always()
   
 - script: |
     pytest Auto/Testcases/SuperAdmin/test__11_Remove_Customfontsize_and_validate.py
   displayName: 'Validate Removed Fontsize'
+  continueOnError: true
+  condition: always()
 
 - script: |
     pytest Auto/Testcases/SuperAdmin/test__12_Add_New_URL_validate_Preview.py
   displayName: 'Add New URL and validate Preview'
+  continueOnError: true
+  condition: always()
