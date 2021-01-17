@@ -36,7 +36,7 @@ class ManualSchedulermixin:
         self.driver.find_element_by_name("baseUrl").send_keys("https://anuvadaktest2.wordpress.com/")
         self.driver.find_element_by_id("language").click()
         self.driver.find_element_by_xpath("//*[text()='hindi']").click()
-        self.driver.find_element_by_xpath("//label[text()='Base URL']").click()
+        #self.driver.find_element_by_xpath("//label[text()='Base URL']").click()
         self.driver.find_element_by_xpath("//button[text()='Next']").click()
         self.driver.find_element_by_xpath("//h2[text()='Add URLs manually']").click()
         self.driver.find_element_by_xpath("//button[text()='Next']").click()

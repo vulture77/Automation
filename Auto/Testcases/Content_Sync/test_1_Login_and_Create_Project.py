@@ -29,7 +29,7 @@ class login(unittest.TestCase,Createprojecsynctmixin):
         #cls.driver = webdriver.Chrome("C:\\Users\\taan\\Desktop\\Auto\\Drivers\\chrome\\chromedriver.exe")
         cls.driver = webdriver.Chrome("chrome//chromedriver.exe")
         cls.driver.implicitly_wait(10)
-        cls.driver.get("https://anuvadak-app.reverieinc.com/")
+        cls.driver.get("https://qa-dashboard.reverieinc.com/")
         cls.driver.set_window_size(1920, 1080)
         
     def test_1_Login_to_Anuvadak(self):
