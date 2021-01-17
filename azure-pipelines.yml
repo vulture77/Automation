@@ -27,7 +27,7 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pytest test_1_login.py
+    pytest Automation/Auto/Testcases/SuperAdmin/test_1_login.py
   displayName: 'login'
 
 
