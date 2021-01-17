@@ -27,11 +27,8 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pytest test_login1.py
+    pytest test_1_login.py
   displayName: 'login'
 
-- script: |
-    pytest test_login2.py
-  displayName: 'create'
 
 
