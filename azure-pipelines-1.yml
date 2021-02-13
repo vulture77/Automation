@@ -1,0 +1,86 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger:
+- master
+
+pool:
+  vmImage: 'vs2017-win2016'
+strategy:
+  matrix:
+    Python37:
+      python.version: '3.7'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(python.version)'
+  displayName: 'Use Python $(python.version)'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install selenium
+    pip install pytest
+    pip install pytest_check
+  displayName: 'Install dependencies'
+
+- script: |
+    pytest Auto/Testcases/Content_Sync/test_1_Login_and_Create_Project.py
+  displayName: 'Create Project'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Auto/Testcases/Content_Sync/test_2_Add_Content.py
+  displayName: 'Add Content'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Auto/Testcases/Content_Sync/test_3_Flush_and_Preview.py
+  displayName: 'Preview and Validate added Content'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Auto/Testcases/Content_Sync/test_4_Remove_content.py
+  displayName: 'Remove content'
+
+- script: |
+    pytest Auto/Testcases/Content_Sync/test_5_flush_cache_and_Previewagain.py
+  displayName: 'Preview and Validate Removed Content'
+  continueOnError: true
+  condition: always()
+  
+
+- script: |
+    pytest Auto/Testcases/Page_Sync/test_2_Add_Content_P.py
+  displayName: 'Add Page'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Auto/Testcases/Page_Sync/test_3_Flush_and_Preview_P.py
+  displayName: 'Validate Page Inclusion'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Auto/Testcases/Page_Sync/test_4_Remove_content_P.py
+  displayName: 'Remove Page'
+  continueOnError: true
+  condition: always()
+  
+- script: |
+    pytest Auto/Testcases/Page_Sync/test_5_Flush_and_Preview_Removed_Page.py
+  displayName: 'Validate Page Removal'
+  continueOnError: true
+  condition: always()
+  
+- script: |
+    pytest Auto/Testcases/Page_Sync/test_6_Delete_P.py
+  displayName: 'Delete Sync Project'
+  continueOnError: true
+  condition: always()
