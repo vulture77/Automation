@@ -27,72 +27,60 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_1_login.py
-  displayName: 'Login'
-  continueOnError: true
-  condition: always()
-
-- script: |
-    pytest Auto/Testcases/SuperAdmin/test_2_Create_Users.py
-  displayName: 'Create Users'
-  continueOnError: true
-  condition: always()
-
-- script: |
-    pytest Auto/Testcases/SuperAdmin/test_3_Edit_User.py
-  displayName: 'Modify Users'
-  continueOnError: true
-  condition: always()
-
-- script: |
-    pytest Auto/Testcases/SuperAdmin/test_5_Create_Project.py
+    pytest Auto/Testcases/Content_Sync/test_1_Login_and_Create_Project.py
   displayName: 'Create Project'
+  continueOnError: true
+  condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_6_Preview_Localization.py
-  displayName: 'Preview Localization'
+    pytest Auto/Testcases/Content_Sync/test_2_Add_Content.py
+  displayName: 'Add Content'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Auto/Testcases/Content_Sync/test_3_Flush_and_Preview.py
+  displayName: 'Preview and Validate added Content'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Auto/Testcases/Content_Sync/test_4_Remove_content.py
+  displayName: 'Remove content'
+
+- script: |
+    pytest Auto/Testcases/Content_Sync/test_5_flush_cache_and_Previewagain.py
+  displayName: 'Preview and Validate Removed Content'
   continueOnError: true
   condition: always()
   
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_7_Add_Exclusion_and_Validate.py
-  displayName: 'Validate Added Exclusion'
+    pytest Auto/Testcases/Page_Sync/test_2_Add_Content_P.py
+  displayName: 'Add Page'
   continueOnError: true
   condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_8_Remove_Exclusion_and_Validate.py
-  displayName: 'Validate Removed Exclusion'
+    pytest Auto/Testcases/Page_Sync/test_3_Flush_and_Preview_P.py
+  displayName: 'Validate Page Inclusion'
   continueOnError: true
   condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_9_Upload_Csv_and_Validate.py
-  displayName: 'Validate CSV Translation'
+    pytest Auto/Testcases/Page_Sync/test_4_Remove_content_P.py
+  displayName: 'Remove Page'
   continueOnError: true
   condition: always()
   
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test__10_Add_Customfontsize_and_Validate.py
-  displayName: 'Validate added Fontsize'
+    pytest Auto/Testcases/Page_Sync/test_5_Flush_and_Preview_Removed_Page.py
+  displayName: 'Validate Page Removal'
   continueOnError: true
   condition: always()
   
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test__11_Remove_Customfontsize_and_validate.py
-  displayName: 'Validate Removed Fontsize'
-  continueOnError: true
-  condition: always()
-
-- script: |
-    pytest Auto/Testcases/SuperAdmin/test__12_Add_New_URL_validate_Preview.py
-  displayName: 'Add New URL and validate Preview'
-  continueOnError: true
-  condition: always()
-
-- script: |
-    pytest Auto/Testcases/SuperAdmin/test__13_Delete_Project.py
-  displayName: 'Delete Project'
+    pytest Auto/Testcases/Page_Sync/test_6_Delete_P.py
+  displayName: 'Delete Sync Project'
   continueOnError: true
   condition: always()
