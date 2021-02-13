@@ -17,17 +17,16 @@ chrome_options.add_argument("--headless")
 
 class login(unittest.TestCase,Createprojecsync1tmixin):
 
-    #qa_username = 'admin@reverieinc.com'
-    qa_username = 'qa@reverieinc.com'
+    qa_username = 'admin@reverieinc.com'
+    #qa_username = 'qa@reverieinc.com'
     qa_password = 'admin'
     randstring = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
 
     @classmethod
     def setUpClass(cls):
 
-        #cls.driver = webdriver.Chrome(executable_path="C:\\Users\\taan\\Desktop\\Auto\\Drivers\\chrome\\chromedriver.exe", options=chrome_options)
+        cls.driver = webdriver.Chrome(executable_path="C:\\Users\\taan\\Desktop\\Auto\\Drivers\\chrome\\chromedriver.exe", options=chrome_options)
         #cls.driver = webdriver.Chrome("C:\\Users\\taan\\Desktop\\Auto\\Drivers\\chrome\\chromedriver.exe")
-        cls.driver = webdriver.Chrome("chrome//chromedriver.exe")
         cls.driver.implicitly_wait(10)
         cls.driver.get("https://qa-dashboard.reverieinc.com/")
         cls.driver.set_window_size(1920, 1080)

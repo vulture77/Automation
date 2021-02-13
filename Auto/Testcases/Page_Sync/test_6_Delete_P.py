@@ -26,17 +26,16 @@ class login(unittest.TestCase,Createprojecsync1tmixin):
     @classmethod
     def setUpClass(cls):
 
-        #cls.driver = webdriver.Chrome(executable_path="C:\\Users\\taan\\Desktop\\Auto\\Drivers\\chrome\\chromedriver.exe", options=chrome_options)
+        cls.driver = webdriver.Chrome(executable_path="C:\\Users\\taan\\Desktop\\Auto\\Drivers\\chrome\\chromedriver.exe", options=chrome_options)
         #cls.driver = webdriver.Chrome(executable_path="C:\\Users\\taan\\Desktop\\Auto\\Drivers\\chrome\\chromedriver.exe")
-        cls.driver = webdriver.Chrome("chrome//chromedriver.exe")
         cls.driver.implicitly_wait(10)
         cls.driver.get("https://qa-dashboard.reverieinc.com/")
         cls.driver.set_window_size(1920, 1080)
 
-    def xtest_1_Login_to_Anuvadak(self):
+    def test_1_Login_to_Anuvadak(self):
         self.Login_Anuvadak()
 
-    def xtest_2_Delete_Project_TM(self):
+    def test_2_Delete_Project_TM(self):
         self.Deleteproject()
 
     @classmethod

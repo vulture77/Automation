@@ -37,7 +37,7 @@ class Createprojecsync1tmixin:
         self.driver.find_element_by_name("baseUrl").send_keys("https://anuvadhaqa.wordpress.com/")
         self.driver.find_element_by_id("language").click()
         self.driver.find_element_by_xpath("//*[text()='hindi']").click()
-        #self.driver.find_element_by_xpath("//label[text()='Base URL']").click()
+        self.driver.find_element_by_xpath("//label[text()='Base URL']").click()
         # self.driver.find_element_by_xpath("(//div[text()='Please select'])[2]").click()
         # self.driver.find_element_by_xpath("//li[text()='RealTime']").click()
         self.driver.find_element_by_xpath("//button[text()='Next']").click()
@@ -79,6 +79,7 @@ class Createprojecsync1tmixin:
         self.driver.find_element_by_xpath("(//button[@title='Toggle menu'])[1]").click()
         self.driver.find_element_by_xpath("//button[text()='Publish']").click()
         time.sleep(5)
+        time.sleep(320)
         self.driver.close()
     
 
@@ -105,11 +106,12 @@ class Createprojecsync1tmixin:
         self.driver.find_element_by_link_text("https://anuvadhaqa.wordpress.com").click()
         self.driver.switch_to.window(self.driver.window_handles[1])
         self.driver.find_element_by_link_text("संपर्क करें").click()
-        self.driver.find_element_by_xpath("//h1[text()='संपर्क करें']").click()
+        #self.driver.find_element_by_xpath("//h1[text()='संपर्क करें']").click()
         print("Previewed Section successfully")
         self.driver.close()
         self.driver.switch_to.window(self.driver.window_handles[0])
         self.driver.close()
+
 
     def Delete_Content(self):
 
@@ -122,6 +124,43 @@ class Createprojecsync1tmixin:
         self.driver.find_element_by_xpath("(//button[@title='Toggle menu'])[1]").click()
         self.driver.find_element_by_xpath("//button[text()='Bin']").click()
         time.sleep(2)
+        time.sleep(320)
+        self.driver.close()
+    
+    def Flushcache_and_preview_Removed_Page(self):
+
+        self.driver.implicitly_wait(10)
+        self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
+        self.driver.find_element_by_link_text("Projectx1").click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//div[text()='Settings']").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//button[text()='Flush Cache now']").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath("//span[text()='Select all']").click()
+        self.driver.find_element_by_id("all-lang-cache").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
+        self.driver.find_element_by_xpath("(//tbody/tr[4]/td[5]/span[1]//*[local-name()='svg'])[1]").click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//button[contains(@class,'ant-btn ant-dropdown-trigger')]").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//*[text()='hindi']").click()
+        self.driver.find_element_by_link_text("https://anuvadhaqa.wordpress.com").click()
+        self.driver.switch_to.window(self.driver.window_handles[1])
+        
+        try:
+            self.elem = self.driver.find_element_by_link_text("संपर्क करें")
+            if self.elem.is_displayed():
+                self.elem.click()
+                print("Element Still Present")
+                raise Exception
+
+        except NoSuchElementException:
+                print("Element Removed successfully")
+
+        self.driver.close()
+        self.driver.switch_to.window(self.driver.window_handles[0])
         self.driver.close()
 
     def Deleteproject(self): 

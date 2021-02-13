@@ -37,7 +37,7 @@ class Createprojecsynctmixin:
         self.driver.find_element_by_name("baseUrl").send_keys("https://anuvadhaqa.wordpress.com/")
         self.driver.find_element_by_id("language").click()
         self.driver.find_element_by_xpath("//*[text()='hindi']").click()
-        #self.driver.find_element_by_xpath("//label[text()='Base URL']").click()
+        self.driver.find_element_by_xpath("//label[text()='Base URL']").click()
         # self.driver.find_element_by_xpath("(//div[text()='Please select'])[2]").click()
         # self.driver.find_element_by_xpath("//li[text()='RealTime']").click()
         self.driver.find_element_by_xpath("//button[text()='Next']").click()
@@ -78,6 +78,7 @@ class Createprojecsynctmixin:
         self.driver.find_element_by_xpath("(//button[@title='Toggle menu'])[1]").click()
         self.driver.find_element_by_xpath("//button[text()='Publish']").click()
         time.sleep(5)
+        time.sleep(320)
         self.driver.close()
     
 
@@ -120,6 +121,7 @@ class Createprojecsynctmixin:
         self.driver.find_element_by_xpath("(//button[@title='Toggle menu'])[1]").click()
         self.driver.find_element_by_xpath("//button[text()='Bin']").click()
         time.sleep(2)
+        time.sleep(320)
         self.driver.close()
 
     def Flushcache_and_preview_Removed_Content(self):
@@ -150,6 +152,7 @@ class Createprojecsynctmixin:
             if self.elem.is_displayed():
                 self.elem.click()
                 print("Element Still Present")
+                raise Exception
 
         except NoSuchElementException:
                 print("Element Removed successfully")
