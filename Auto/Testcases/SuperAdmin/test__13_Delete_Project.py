@@ -31,10 +31,10 @@ class login(unittest.TestCase,Createprojectmixin):
         cls.driver.get("https://qa-dashboard.reverieinc.com/")
         cls.driver.set_window_size(1920, 1080)
     
-    def xtest_1_Login_Anuvadak(self):
+    def test_1_Login_Anuvadak(self):
         self.Login_Anuvadak()
     
-    def xtest_2_Project_Deletion(self):
+    def test_2_Project_Deletion(self):
         self.Deleteproject()
 
     @classmethod
