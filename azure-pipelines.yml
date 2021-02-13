@@ -90,3 +90,9 @@ steps:
   displayName: 'Add New URL and validate Preview'
   continueOnError: true
   condition: always()
+
+- script: |
+    pytest Auto/Testcases/SuperAdmin/test__13_Delete_Project.py
+  displayName: 'Delete Project'
+  continueOnError: true
+  condition: always()
