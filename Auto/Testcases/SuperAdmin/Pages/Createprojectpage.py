@@ -447,7 +447,7 @@ class Createprojectmixin:
         self.driver.switch_to.window(self.driver.window_handles[0])
         self.driver.close()
 
-    def xDeleteproject(self): 
+    def Deleteproject(self): 
         
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
