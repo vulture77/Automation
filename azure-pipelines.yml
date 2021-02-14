@@ -45,8 +45,16 @@ steps:
   condition: always()
 
 - script: |
+    pytest Auto/Testcases/SuperAdmin/test_4_Delete_Users.py
+  displayName: 'Delete Users'
+  continueOnError: true
+  condition: always()
+
+- script: |
     pytest Auto/Testcases/SuperAdmin/test_5_Create_Project.py
   displayName: 'Create Project'
+  continueOnError: false
+  condition: always()
 
 - script: |
     pytest Auto/Testcases/SuperAdmin/test_6_Preview_Localization.py
