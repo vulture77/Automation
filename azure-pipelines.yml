@@ -27,7 +27,7 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_1_login.py
+    pytest --html="Sprnt-4.html" ./Auto/Testcases/SuperAdmin/test_1_login.py 
   displayName: 'Login'
   continueOnError: true
   condition: always()
