@@ -27,13 +27,6 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    python -m pip install --upgrade pip
-    pip install selenium
-    pip install pytest
-    pip install pytest_check
-  displayName: 'Install dependencies'
-
-- script: |
     pytest Testcases/SuperAdmin/test_8_Create_Project.py
   displayName: 'Create Project'
   continueOnError: true
