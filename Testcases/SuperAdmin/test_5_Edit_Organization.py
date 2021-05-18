@@ -25,10 +25,10 @@ class login(unittest.TestCase,Createprojectmixin):
         cls.driver.get(cls.Anuvadak_Beta)
         cls.driver.set_window_size(1920 ,1080)
 
-    def xtest_1_Login_Anuvadak(self):
+    def test_1_Login_Anuvadak(self):
         self.Login_Anuvadak()
     
-    def xtest_2_Edit_an_Organization(self):
+    def test_2_Edit_an_Organization(self):
         self.Edit_Organization()
         self.driver.close()
         
