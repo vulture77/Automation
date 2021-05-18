@@ -21,7 +21,7 @@ class Createprojectpmmixin:
     chrome_options.add_argument("--headless")
     chrome_options.add_argument('--allow-running-insecure-content')
     chrome_options.add_argument('--ignore-certificate-errors')
-    Path = "C:\\Users\\taan\\Desktop\\Auto\\Drivers\\chrome\\chromedriver.exe"
+    Path = "chrome/chromedriver.exe"
     Anuvadak_Beta = "https://qa-dashboard.reverieinc.com/"
     Prabandhak_Beta = "http://beta.prabandhak.in/"
 
