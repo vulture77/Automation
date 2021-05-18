@@ -7,15 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'vs2017-win2016'
 strategy:
   matrix:
-    Python27:
-      python.version: '2.7'
-    Python35:
-      python.version: '3.5'
-    Python36:
-      python.version: '3.6'
     Python37:
       python.version: '3.7'
 
@@ -27,10 +21,81 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-    pip install -r requirements.txt
+    pip install selenium
+    pip install pytest
+    pip install pytest_check
   displayName: 'Install dependencies'
 
+
 - script: |
-    pip install pytest pytest-azurepipelines
-    pytest
-  displayName: 'pytest'
+    pytest Testcases/Project_Manager/test_1_Create_Users_PM.py
+  displayName: 'Create Users'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/Project_Manager/test_2_Edit_User_PM.py
+  displayName: 'Edit Users'
+  continueOnError: true
+  condition: always()
+  
+
+- script: |
+    pytest Testcases/Project_Manager/test_3_Delete_Users_PM.py
+  displayName: 'Delete Users'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/Project_Manager/test_4_Create_Project_PM.py
+  displayName: 'Create Project'
+  continueOnError: true
+  condition: always()
+  
+- script: |
+    pytest Testcases/Project_Manager/test_5_Preview_Localization_PM.py
+  displayName: 'Preview Localiztion Page'
+  continueOnError: true
+  condition: always()
+  
+- script: |
+    pytest Testcases/Project_Manager/test_6_Add_Exclusion_and_Validate_PM.py
+  displayName: 'Add Exclusion and Validate'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/Project_Manager/test_7_Remove_Exclusion_and_Validate_PM.py
+  displayName: 'Remove Exclusion and Validate'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/Project_Manager/test_8_Upload_Csv_and_Validate_PM.py
+  displayName: 'Upload Translations and Validate'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/Project_Manager/test_9_Add_Customfontsize_and_Validate_PM.py
+  displayName: 'Add Font and Validate'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/Project_Manager/test__10_Remove_Customfontsize_and_validate_PM.py
+  displayName: 'Remove Font and Validate'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/Project_Manager/test__11_Add_New_URL_validate_Preview_PM.py
+  displayName: 'Add New URL and validate Preview'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/Project_Manager/test__12_Delete_Project_PM.py
+  displayName: 'Delete Project'
+  continueOnError: true
+  condition: always()
