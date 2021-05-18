@@ -27,66 +27,107 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_1_login.py
+    pytest Testcases/SuperAdmin/test_1_login.py
   displayName: 'Login'
   continueOnError: true
   condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_2_Create_Users.py
+    pytest Testcases/SuperAdmin/test_2_Create_Organization.py
   displayName: 'Create Users'
   continueOnError: true
   condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_3_Edit_User.py
+    pytest Testcases/SuperAdmin/test_3_Create_Users.py
   displayName: 'Modify Users'
   continueOnError: true
   condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_5_Create_Project.py
+    pytest Testcases/SuperAdmin/test_4_Edit_User.py
   displayName: 'Create Project'
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_6_Preview_Localization.py
+    pytest Testcases/SuperAdmin/test_5_Edit_Organization.py
   displayName: 'Preview Localization'
   continueOnError: true
   condition: always()
   
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_7_Add_Exclusion_and_Validate.py
+    pytest Testcases/SuperAdmin/test_6_Delete_Users.py
   displayName: 'Validate Added Exclusion'
   continueOnError: true
   condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_8_Remove_Exclusion_and_Validate.py
+    pytest Testcases/SuperAdmin/test_7_Delete_Organization.py
   displayName: 'Validate Removed Exclusion'
   continueOnError: true
   condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test_9_Upload_Csv_and_Validate.py
+    pytest Testcases/SuperAdmin/test_8_Create_Project.py
   displayName: 'Validate CSV Translation'
   continueOnError: true
   condition: always()
   
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test__10_Add_Customfontsize_and_Validate.py
+    pytest Testcases/SuperAdmin/test_9_Preview_Localization.py
   displayName: 'Validate added Fontsize'
   continueOnError: true
   condition: always()
   
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test__11_Remove_Customfontsize_and_validate.py
+    pytest Testcases/SuperAdmin/test__10_Add_Exclusion_and_Validate.py
   displayName: 'Validate Removed Fontsize'
   continueOnError: true
   condition: always()
 
 - script: |
-    pytest Auto/Testcases/SuperAdmin/test__12_Add_New_URL_validate_Preview.py
+    pytest Testcases/SuperAdmin/test__11_Remove_Exclusion_and_Validate.py
   displayName: 'Add New URL and validate Preview'
   continueOnError: true
   condition: always()
+
+- script: |
+    pytest Testcases/SuperAdmin/test__12_Upload_Csv_and_Validate.py
+  displayName: 'Add New URL and validate Preview'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/SuperAdmin/test__13_Add_Customfontsize_and_Validate.py
+  displayName: 'Add New URL and validate Preview'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/SuperAdmin/test__14_Remove_Customfontsize_and_validate.py
+  displayName: 'Add New URL and validate Preview'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/SuperAdmin/test__15_Add_New_URL_validate_Preview.py
+  displayName: 'Add New URL and validate Preview'
+  continueOnError: true
+  condition: always()
+
+- script: |
+    pytest Testcases/SuperAdmin/test__16_Delete_Project.py
+  displayName: 'Add New URL and validate Preview'
+  continueOnError: true
+  condition: always()
+
+
+
+
+
+
+
+
+
+
+
