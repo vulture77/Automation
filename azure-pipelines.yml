@@ -37,3 +37,4 @@ steps:
   displayName: 'Upload Translations and Validate'
   continueOnError: true
   condition: always()
+
