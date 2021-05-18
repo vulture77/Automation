@@ -1,0 +1,121 @@
+Hello Team,
+
+Please find the below-detailed Test Summary Report of Anuvadak
+
+Overview 
+This is a test report for Anuvadak on desktop systems. This report contains two main parts
+
+Features, Browsers & Device Coverage
+This section provides a summary of feature coverage and device coverage achieved during the test cycles. The section covers the following
+Scope Information
+Test Coverage Details
+Project Timelines
+Bug Summary
+This section provides a summary of bugs reported by the QA team 
+Bugs per Severity
+Bugs per Status
+
+Features Coverage  
+
+- New Design V2
+- Super Admin & Project Manager Module
+    -User Management
+    -Project Management
+    -Users
+    -Projects
+    -Create Users
+    -Create Projects (Js/Real)
+    -Schedulers (Auto/Manual)
+    -Prabandhak Enabled Projects
+    -Custom font Size
+    -No Translation
+    -Download Complete stats
+    -Upload CSV
+    -Add new page to scope
+    -Stats
+- User Dashboard
+- Enhanced functionality
+    -Human Verified
+    -Preview/Language Widget Sync
+- Wordcount and URL count updation on syncing new content/URL
+
+
+Device Coverage
+Windows 10
+Browser Coverage
+Chrome
+Edge
+In Scope
+All Features that are listed above
+
+
+QA Timeline  
+Test Start Date: 17th November 2020
+Test End Date: 28th November 2020
+Duration: ~9 Days
+ 
+Bug Summary  
+
+Overall, 105 issues are reported on Anuvadak till date with the enhancements.
+
+Total Number of Bugs: 105 (Including  Enhancements)  
+Total Number of Open Bugs :25 (Including  Enhancements)  
+Total Number of bugs to be verified (Pending from QA) : 0
+Total Number of Deferred bugs : 5
+Total Number of Closed Bugs (Dev) : 79
+Total number of Verified and Closed Bugs (QA) : 79
+
+Total Bugs with severity - 105
+Blocker : 2
+Critical : 20
+Major : 26
+Minor : 34
+Trivial : 7
+Enhancement : 16
+
+Total Bugs with Severity in this cycle - 37
+Blocker : 0
+Critical : 12
+Major : 12
+Minor : 10
+Trivial : 0
+Enhancement : 3
+
+Total Open Bugs with Severity - 25
+Blocker : 1
+Critical : 1
+Major : 4
+Minor : 8
+Trivial : 1
+Enhancement : 11
+
+Note:: The high severity bugs on the open state does not come under any of the inscope features listed above.
+
+Conclusion :
+Since Anuvadak is almost stable with the features listed above and there are no Blocker & Critical issues on these features, We can go ahead for production release on these listed features.
+
+Kindly find below the attachment of Automation Test Report on Regression Testing (Sprint-1 & Sprint-2)   
+Language : Python
+Framework : Pytest
+
+
+Thanks and Regards
+
+Chandan M 
+QA Engineer
+
+Reverie Language Technologies Pvt Ltd
+
+
++91-8892844940
+
+chandan.m@reverieinc.com
+
+www.reverieinc.com
+
+5th Floor , Jio Avana Building,Bangalore
+facebook	
+twitter	
+linkedin	
+Microsoft Partner Award Winner 2019
+Attachments area
