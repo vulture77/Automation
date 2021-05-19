@@ -18,7 +18,7 @@ chrome_options.add_argument("--headless")
 class Createprojectpmmixin:
 
     chrome_options = Options()  
-    chrome_options.add_argument("--headless")
+    #chrome_options.add_argument("--headless")
     chrome_options.add_argument('--allow-running-insecure-content')
     chrome_options.add_argument('--ignore-certificate-errors')
     Path = "chrome/chromedriver.exe"
@@ -50,7 +50,7 @@ class Createprojectpmmixin:
         self.driver.find_element_by_name("lastName").send_keys("Tester")
         self.driver.find_element_by_name("email").send_keys("tester123@gmail.com")
         self.driver.find_element_by_xpath("//button[@class='ant-btn ant-dropdown-trigger']").click()
-        self.driver.find_element_by_xpath("//li[text()='QA Owner']").click()
+        self.driver.find_element_by_xpath("//li[text()='Automation_Owner']").click()
         self.driver.find_element_by_xpath("//button[text()='Next']").click()
         time.sleep(5)
         self.driver.find_element_by_xpath("//button[text()='save & exit']").click()
@@ -97,7 +97,7 @@ class Createprojectpmmixin:
         self.driver.find_element_by_xpath("//li[text()=' Users']").click()
         time.sleep(5)
         self.driver.find_element_by_xpath("//span[@title='Filter menu']").click()
-        self.driver.find_element_by_xpath("//input[@class='ant-input']").send_keys("User Dashboard",Keys.ENTER)
+        self.driver.find_element_by_xpath("//input[@class='ant-input']").send_keys("Test Owner",Keys.ENTER)
         self.driver.find_element_by_xpath("//span[contains(@class,'d-flex flex-row')]//button[2]").click()
         self.driver.find_element_by_name("name").send_keys("Owner_Project")
         self.driver.find_element_by_name("baseUrl").send_keys("https://anuvadhaqa.wordpress.com/")

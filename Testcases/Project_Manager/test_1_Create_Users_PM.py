@@ -14,7 +14,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class login(unittest.TestCase,Createprojectpmmixin):
 
-    qa_username = 'qaowner@gmail.com'
+    qa_username = 'automationowner@gmail.com'
     qa_password = 'admin'
 
 
