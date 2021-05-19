@@ -394,7 +394,7 @@ class Createprojectpmmixin:
         self.driver.find_element_by_id("projectName").send_keys("Owner_Project")
         time.sleep(1)
         self.driver.find_element_by_xpath("//input[@value='Delete TM']").click()
-        time.sleep(3)
+        time.sleep(10)
         print("Deleted Project Successfully")
         
 
