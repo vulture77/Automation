@@ -1,5 +1,0 @@
-
-anv-qa-mysql.mysql.database.azure.com
-anuvadakqa@anv-qa-mysql
-3306
-Quality123!
