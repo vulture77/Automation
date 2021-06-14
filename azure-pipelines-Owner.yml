@@ -4,11 +4,11 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 schedules:
-- cron: "5 * * * *"
+- cron: "2 * * * *"
   displayName: Daily midnight build
   branches:
     include:
-    - main
+    - master
 
 trigger:
 - master
