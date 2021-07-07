@@ -19,6 +19,12 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
+  
+- task: DownloadSecureFile@1
+  name: caCertificate
+  displayName: 'Download'
+  inputs:
+    secureFile: '9 wordcount all languages.csv'
 
 - script: |
     python -m pip install --upgrade pip
