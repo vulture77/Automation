@@ -35,7 +35,7 @@ class Createprojectmixin:
         print("Logged into Anuvadhak Successfully")
         time.sleep(2)
     
-    def Login_With_Valid_Credentials(self):
+    def xLogin_With_Valid_Credentials(self):
         
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_id("normal_login_email").send_keys(self.qa_username)
@@ -45,7 +45,7 @@ class Createprojectmixin:
         time.sleep(2)
         self.driver.find_element_by_id("logout-btn").click()    
 
-    def Login_With_Invalid_Email_Address(self):
+    def xLogin_With_Invalid_Email_Address(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_id("normal_login_email").send_keys(self.qa_username1)
@@ -56,7 +56,7 @@ class Createprojectmixin:
         print("Login Failed due to Invalid Email Address")
     
     
-    def Login_With_Invalid_Password(self):
+    def xLogin_With_Invalid_Password(self):
 
         self.driver.implicitly_wait(10)
         self.driver.refresh()
@@ -68,7 +68,7 @@ class Createprojectmixin:
         print("Login Failed due to Invalid Password")
 
     
-    def Create_Organization(self):
+    def xCreate_Organization(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//span[text()='Organisations']").click()
@@ -89,7 +89,7 @@ class Createprojectmixin:
         self.driver.find_element_by_xpath("(//button[contains(@class,'ant-btn btn')])[2]").click()
         time.sleep(10)
         
-    def Create_User_under_Organization(self):
+    def xCreate_User_under_Organization(self):
         
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Users']").click()
@@ -107,7 +107,7 @@ class Createprojectmixin:
         time.sleep(2)
     
     
-    def Edit_Owner(self):
+    def xEdit_Owner(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Users']").click()
@@ -123,7 +123,7 @@ class Createprojectmixin:
         time.sleep(2)
         print("PM User Modified Successfully")
 
-    def Edit_Admin(self):
+    def xEdit_Admin(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Users']").click()
@@ -139,7 +139,7 @@ class Createprojectmixin:
         print("Admin User Modified Successfully")
 
 
-    def Delete_Admin_User(self):
+    def xDelete_Admin_User(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Users']").click()
@@ -152,7 +152,7 @@ class Createprojectmixin:
         time.sleep(2)
         print("Admin User Deleted Successfully")
 
-    def Delete_Organization(self):
+    def xDelete_Organization(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//span[text()='Organisations']").click()
@@ -174,7 +174,7 @@ class Createprojectmixin:
         time.sleep(10)
 
 
-    def Create_NonJS_Project(self):
+    def xCreate_NonJS_Project(self):
         
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Users']").click()
@@ -208,7 +208,7 @@ class Createprojectmixin:
         #         print("Project Created afte 120 seconds Successfully")
         #         self.driver.close()
 
-    def Preview_Localization(self):        
+    def xPreview_Localization(self):        
         
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
@@ -228,7 +228,7 @@ class Createprojectmixin:
         self.driver.close()
         self.driver.switch_to.window(self.driver.window_handles[0])
 
-    def Add_Exclusion(self):   
+    def xAdd_Exclusion(self):   
         
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
@@ -245,7 +245,7 @@ class Createprojectmixin:
         print("Added Exclusion Section Successfully")
         time.sleep(2)
 
-    def Flushcache_and_Validate_added_Exclusion(self):
+    def xFlushcache_and_Validate_added_Exclusion(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//div[text()='Settings']").click()
@@ -270,7 +270,7 @@ class Createprojectmixin:
         self.driver.close()
         self.driver.switch_to.window(self.driver.window_handles[0])
 
-    def Remove_Exclusion(self):
+    def xRemove_Exclusion(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
@@ -286,7 +286,7 @@ class Createprojectmixin:
         time.sleep(1)
         self.driver.find_element_by_xpath("//p[text()='Delete']").click()
     
-    def Flushcache_and_Validate_Removed_Exclusion(self):
+    def xFlushcache_and_Validate_Removed_Exclusion(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//i[contains(@class,'fa fa-arrow-left')]").click()
@@ -326,7 +326,7 @@ class Createprojectmixin:
         self.driver.find_element_by_xpath("//button[text()='Upload']").click()
         time.sleep(1)
         self.driver.find_element_by_xpath("//button[@class='ant-btn']/following-sibling::button[1]").click()
-        self.driver.find_element_by_css_selector("input[type='file']").send_keys("Fileformats/File.csv")
+        self.driver.find_element_by_css_selector("input[type='file']").send_keys("9 wordcount all languages.csv")
         time.sleep(2)
         self.driver.find_element_by_xpath("//button[@class='ant-btn']/following-sibling::button[1]").click()
         self.driver.find_element_by_xpath("//button[contains(@class,'ant-btn w-25')]").click()
@@ -334,7 +334,7 @@ class Createprojectmixin:
         print("Uploaded Translations via CSV-file Successfully")
         time.sleep(2)
     
-    def Flushcache_and_Validate_Uploded_translation(self):
+    def xFlushcache_and_Validate_Uploded_translation(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//div[text()='Settings']").click()
@@ -361,7 +361,7 @@ class Createprojectmixin:
     
     
     
-    def Add_Custom_Fontsize(self):   
+    def xAdd_Custom_Fontsize(self):   
         
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
@@ -384,7 +384,7 @@ class Createprojectmixin:
         self.driver.find_element_by_xpath("//button[text()='Add customization']").click()
         print("Added FontSize Section Successfully")
     
-    def Flushcache_and_Validate_Added_Size(self):
+    def xFlushcache_and_Validate_Added_Size(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//div[text()='Settings']").click()
@@ -412,7 +412,7 @@ class Createprojectmixin:
         self.driver.switch_to.window(self.driver.window_handles[0])
         
     
-    def Remove_Custom_Fontsize(self):
+    def xRemove_Custom_Fontsize(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
@@ -428,7 +428,7 @@ class Createprojectmixin:
         self.driver.find_element_by_xpath("//p[text()='Delete']").click()
         print("Removed FontSize Section Successfully")
 
-    def Flushcache_and_Validate_Removed_Size(self):
+    def xFlushcache_and_Validate_Removed_Size(self):
 
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//i[contains(@class,'fa fa-arrow-left')]").click()
@@ -465,7 +465,7 @@ class Createprojectmixin:
         self.driver.switch_to.window(self.driver.window_handles[0])
         
 
-    def Deleteproject(self): 
+    def xDeleteproject(self): 
         
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_xpath("//li[text()=' Projects']").click()
