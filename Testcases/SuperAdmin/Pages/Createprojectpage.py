@@ -326,7 +326,7 @@ class Createprojectmixin:
         self.driver.find_element_by_xpath("//button[text()='Upload']").click()
         time.sleep(1)
         self.driver.find_element_by_xpath("//button[@class='ant-btn']/following-sibling::button[1]").click()
-        self.driver.find_element_by_css_selector("input[type='file']").send_keys("9 wordcount all languages.csv")
+        self.driver.find_element_by_css_selector("input[type='file']").send_keys("https://github.com/vulture77/Automation/blob/f97fc8c06fe3ffd1cdad8593b54beee9b0bfabd2/Fileformats/File.csv")
         time.sleep(2)
         self.driver.find_element_by_xpath("//button[@class='ant-btn']/following-sibling::button[1]").click()
         self.driver.find_element_by_xpath("//button[contains(@class,'ant-btn w-25')]").click()
