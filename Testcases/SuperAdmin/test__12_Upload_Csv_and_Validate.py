@@ -31,7 +31,7 @@ class login(unittest.TestCase,Createprojectmixin):
     def test_2_Upload_CSV_File(self):
         self.Upload_Csv_file()
 
-    def test_3_Flushcache_and_Validate_Uploded_translation(self):
+    def xtest_3_Flushcache_and_Validate_Uploded_translation(self):
         self.Flushcache_and_Validate_Uploded_translation()
         self.driver.close()
 
