@@ -18,7 +18,7 @@ class Createprojectmixin:
     chrome_options.add_argument('--allow-running-insecure-content')
     chrome_options.add_argument('--ignore-certificate-errors')
     Path = "chrome/chromedriver.exe"
-    filepath = "D:\\a\\1\\schrome\\file.csv"
+    filepath = "D:\\a\\1\\s\\chrome\\file.csv"
     Anuvadak_Beta = "https://qa-dashboard.reverieinc.com/"
     Prabandhak_Beta = "http://beta.prabandhak.in/"
 
