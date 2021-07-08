@@ -18,6 +18,7 @@ class Createprojectmixin:
     chrome_options.add_argument('--allow-running-insecure-content')
     chrome_options.add_argument('--ignore-certificate-errors')
     Path = "chrome/chromedriver.exe"
+    filepath = "chrome/File.csv"
     Anuvadak_Beta = "https://qa-dashboard.reverieinc.com/"
     Prabandhak_Beta = "http://beta.prabandhak.in/"
 
@@ -326,7 +327,7 @@ class Createprojectmixin:
         self.driver.find_element_by_xpath("//button[text()='Upload']").click()
         time.sleep(1)
         self.driver.find_element_by_xpath("//button[@class='ant-btn']/following-sibling::button[1]").click()
-        self.driver.find_element_by_css_selector("input[type='file']").send_keys("chrome/File.csv")
+        self.driver.find_element_by_css_selector("input[type='file']").send_keys(self.filepath)
         time.sleep(2)
         self.driver.find_element_by_xpath("//button[@class='ant-btn']/following-sibling::button[1]").click()
         self.driver.find_element_by_xpath("//button[contains(@class,'ant-btn w-25')]").click()
