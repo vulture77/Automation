@@ -30,6 +30,19 @@ steps:
 
 
 - script: |
+    pytest Testcases/SuperAdmin/test_8_Create_Project.py
+  displayName: 'Create Project'
+  continueOnError: true
+  condition: always()
+  
+- script: |
+    pytest Testcases/SuperAdmin/test_9_Preview_Localization.py
+  displayName: 'Preview Localiztion Page'
+  continueOnError: true
+  condition: always()
+  
+
+- script: |
     pytest Testcases/SuperAdmin/test__12_Upload_Csv_and_Validate.py
   displayName: 'Upload Translations and Validate'
   continueOnError: true
